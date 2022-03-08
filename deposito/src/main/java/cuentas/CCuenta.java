@@ -1,5 +1,9 @@
 package cuentas;
 
+/**
+ * Esta clase contiene los datos de cada cuenta
+ * @author pedromartinez
+ */
 public class CCuenta {
 
     private String nombre;
@@ -7,10 +11,20 @@ public class CCuenta {
     private double saldo;
     private double tipoInterés;
 
+    /**
+     * Método contructor por defecto
+     */
     public CCuenta()
     {
     }
 
+    /**
+     * Método constructor parametrizado
+     * @param nom Nombre del titular
+     * @param cue Número de cuenta
+     * @param sal Saldo en cuenta
+     * @param tipo Tipo de interés
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -18,11 +32,20 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**
+     *
+     * @return Saldo
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+    /**
+     * Método para ingresar cantidad en cuenta
+     * @param cantidad Cantidad a ingresar
+     * @throws Exception
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -30,6 +53,11 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     * Método para retirar cantidad de cuenta
+     * @param cantidad Cantidad a retirar
+     * @throws Exception
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
@@ -40,56 +68,56 @@ public class CCuenta {
     }
     
         /**
-     * @return the nombre
+     * @return Nombre del titular
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * @param nombre the nombre to set
+     * @param nombre Nombre del titular to set
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
-     * @return the cuenta
+     * @return Número de cuenta
      */
     public String getCuenta() {
         return cuenta;
     }
 
     /**
-     * @param cuenta the cuenta to set
+     * @param cuenta Número de cuenta to set
      */
     public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
 
     /**
-     * @return the saldo
+     * @return Saldo en cuenta
      */
     public double getSaldo() {
         return saldo;
     }
 
     /**
-     * @param saldo the saldo to set
+     * @param saldo Saldo en cuenta to set
      */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
     /**
-     * @return the tipoInterés
+     * @return Tipo de interés
      */
     public double getTipoInterés() {
         return tipoInterés;
     }
 
     /**
-     * @param tipoInterés the tipoInterés to set
+     * @param tipoInterés Tipo de interés to set
      */
     public void setTipoInterés(double tipoInterés) {
         this.tipoInterés = tipoInterés;
